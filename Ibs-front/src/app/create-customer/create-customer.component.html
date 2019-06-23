@@ -1,0 +1,51 @@
+<h3>Cadastrar Pessoa</h3>
+<div [hidden]="submitted" style="width: 300px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Nome</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="customer.name" name="name">
+    </div>
+
+    <div class="form-group">
+      <label for="age">Idade</label>
+      <input type="text" class="form-control" id="age" required [(ngModel)]="customer.age" name="age">
+    </div>
+
+    <div class="form-group">
+      <label for="cpf">CPF</label>
+      <input type="text" class="form-control" id="cpf" required [(ngModel)]="customer.cpf" name="age">
+    </div>
+
+    <div class="form-group">
+      <label for="data_nascimento">Data Nascimento</label>
+      <input type="date" class="form-control" id="dn" required [(ngModel)]="customer.data_nascimento" name="data_nascimento">
+    </div>
+
+    <div class="form-group">
+      <label>Endereço </label>
+      <input type="text" class="form-control" id="endereco" required [(ngModel)]="customer.endereco" name="endereco">
+    </div>
+
+    <div class="form-group">
+      <label>Telefone </label>
+      <input type="tel" class="form-control" id="telefone" required [(ngModel)]="customer.telefone" name="telefone">
+    </div>
+
+    <div class="form-group">
+      <label>E-Mail </label>
+      <input type="email" class="form-control" id="email" required [(ngModel)]="customer.email" name="email">
+    </div>
+
+    <div class="form-group">
+      <label>Obsevação </label>
+      <input type="text" class="form-control" id="Obsevação" required [(ngModel)]="customer.obsevacao" name="obsevacao">
+    </div>
+
+    <button type="submit" class="btn btn-success">Gravar</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>Gravado com sucesso!</h4>
+  <button class="btn btn-success" (click)="newCustomer()">Novo</button>
+</div>

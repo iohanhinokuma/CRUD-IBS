@@ -1,0 +1,34 @@
+<div *ngIf="customer">
+  <div>
+    <label>Nome: </label> {{customer.name}}
+  </div>
+  <div>
+    <label>Idade: </label> {{customer.age}}
+  </div>  
+  <div>
+    <label>CPF: </label> {{customer.cpf}}
+  </div>
+  <div>
+    <label>E-Mail: </label> {{customer.email}}
+  </div>
+  <div>
+    <label>Endereço: </label> {{customer.endereco}}
+  </div>
+  <div>
+    <label>Telefone: </label> {{customer.telefone}}
+  </div>
+  <div>
+    <label>Observação: </label> {{customer.observacao}}
+  </div>
+  <div>
+    <label>Ativo: </label> {{customer.active}}
+  </div>
+
+  <span class="button is-small btn-primary" *ngIf='customer.active' (click)='updateActive(false)'>Inativo</span>
+
+  <span class="button is-small btn-primary" *ngIf='!customer.active' (click)='updateActive(true)'>Ativo</span>
+
+  <span class="button is-small btn-danger" (click)='deleteCustomer()'>Excluir</span>
+
+  <hr/>
+</div>
